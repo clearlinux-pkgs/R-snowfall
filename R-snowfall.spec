@@ -4,7 +4,7 @@
 #
 Name     : R-snowfall
 Version  : 1.84.6.1
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/snowfall_1.84-6.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/snowfall_1.84-6.1.tar.gz
 Summary  : Easier cluster computing (based on snow).
