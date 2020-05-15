@@ -4,7 +4,7 @@
 #
 Name     : R-snowfall
 Version  : 1.84.6.1
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/snowfall_1.84-6.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/snowfall_1.84-6.1.tar.gz
 Summary  : Easier cluster computing (based on snow).
@@ -23,21 +23,22 @@ parallel R programs. This package offers e.g. extended error
 
 %prep
 %setup -q -c -n snowfall
+cd %{_builddir}/snowfall
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569374963
+export SOURCE_DATE_EPOCH=1589535468
 
 %install
-export SOURCE_DATE_EPOCH=1569374963
+export SOURCE_DATE_EPOCH=1589535468
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
